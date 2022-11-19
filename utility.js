@@ -680,7 +680,7 @@ function workingMinutesBetweenDates(startDate, endDate, dayStart=9, dayEnd=18, i
  function Report(sprint, tasks, sheetname='Report')
  {
   this.sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName(sheetname);
-  this.datarow = 8;
+  this.datarow = 9;
   this.statustotrackrow = 8;
   this.statustotrackcol = 8;
   this.closedoncol = 6; // Deffault if no status is tracked.
