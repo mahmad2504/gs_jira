@@ -851,7 +851,7 @@ function workingMinutesBetweenDates(startDate, endDate, dayStart=9, dayEnd=18, i
  } 
  
 
-function Main() 
+function Main2() 
 {
   // Load configuration
     
