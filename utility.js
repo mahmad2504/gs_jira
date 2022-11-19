@@ -849,6 +849,7 @@ function workingMinutesBetweenDates(startDate, endDate, dayStart=9, dayEnd=18, i
     CopySheetData('Report',sprint.name);
   }
  } 
+ 
 
 function Main() 
 {
