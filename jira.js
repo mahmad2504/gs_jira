@@ -215,7 +215,7 @@ function Jira(settings) {
             else
               issue.labels = data["issues"][i].fields.labels;
             break;
-          case field:
+          default:
 		    console.log(field)
             if(data["issues"][i].fields[fields[field]] == null)
               issue[field] = null;
