@@ -69,7 +69,7 @@ function SecondsToDhm(seconds)
   return str;
 }
 
-function useCachedOrLive(cacheToCheck, url,live=0)
+function loadscript(cacheToCheck, url,live=0)
 {
   var cache = CacheService.getUserCache();
   var cachedData = cache.get(cacheToCheck);
