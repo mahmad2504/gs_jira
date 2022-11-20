@@ -68,3 +68,33 @@ function SecondsToDhm(seconds)
   }
   return str;
 }
+function exit(error='')
+{
+  throw new Error( error);
+}
+function DiffInMin(first,second)
+{
+  return (second.getTime() - first.getTime())/(1000*60);
+}
+function CreateNewSheet(name)
+{
+  var activeSpreadsheet = SpreadsheetApp.getActiveSpreadsheet();
+  var yourNewSheet = activeSpreadsheet.getSheetByName(name);
+  if (yourNewSheet == null) 
+  {
+    yourNewSheet = activeSpreadsheet.insertSheet();
+    yourNewSheet.setName(name);
+  }
+}
+function CopySheetData(src,dest)
+{
+  var source = SpreadsheetApp.getActiveSpreadsheet();
+  var srcsheet = source.getSheetByName(src);
+  var destsheet = source.getSheetByName(dest);
+
+  if (destsheet != null) 
+  {
+    source.deleteSheet(destsheet);
+  }
+  srcsheet.copyTo(source).setName(dest);
+}
