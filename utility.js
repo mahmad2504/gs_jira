@@ -68,22 +68,3 @@ function SecondsToDhm(seconds)
   }
   return str;
 }
-
-function loadscript(cacheToCheck, url,live=0)
-{
-  var cache = CacheService.getUserCache();
-  var cachedData = cache.get(cacheToCheck);
-  if(live==1)
-    cachedData=null
-  if(cachedData !== null){
-    console.log("using cached " + cacheToCheck)
-    return cachedData;
-  }
-  else
-  {
-    console.log("getting live " + cacheToCheck);
-    var response = UrlFetchApp.fetch(url).getContentText();
-    cache.put(cacheToCheck, response, cacheExpire);
-    return response
-  }
-}
