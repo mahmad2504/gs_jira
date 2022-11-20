@@ -216,11 +216,13 @@ function Jira(settings) {
               issue.labels = data["issues"][i].fields.labels;
             break;
           case field:
+		    console.log(field)
             if(data["issues"][i].fields[fields[field]] == null)
               issue[field] = null;
             else 
               issue[field] =  data["issues"][i].fields[fields[field]]; 
             break;
+		
         }
       }
       issue.transitions.sort(this.compare_item);
